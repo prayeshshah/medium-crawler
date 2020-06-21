@@ -17,7 +17,8 @@ gem 'turbolinks', '~> 5'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+gem 'nokogiri'
+gem 'httparty'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
