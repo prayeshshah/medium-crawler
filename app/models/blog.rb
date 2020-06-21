@@ -1,13 +1,15 @@
 class Blog < ApplicationRecord
 
+  BASE_URL = 'https://medium.com/tag/'
+
   def self.crawl_and_create(tag)
-    url = 'https://medium.com/tag/' + tag
-    unparsed_html = HTTParty.get(url)
+    url = BASE_URL + tag
+    unparsed_html = get_request(url)
     parsed_doc = Nokogiri::HTML(unparsed_html)
     cards = parsed_doc.css('.postArticle')
     cards.each do |card|
       article_body_url = card.css('.postArticle-readMore a').attr('href').value
-      parsed_article_body_doc = Nokogiri::HTML(HTTParty.get(article_body_url.split('?')[0]))
+      parsed_article_body_doc = Nokogiri::HTML(get_request(article_body_url.split('?')[0]))
       data_hash = {
         author: card.css('.postMetaInline a')[1].text,
         title: card.css('.section-inner h3').text,
@@ -19,4 +21,11 @@ class Blog < ApplicationRecord
       Blog.create(data_hash)
     end
   end
+
+  private
+
+  def self.get_request(url)
+    HTTParty.get(url)
+  end
+
 end

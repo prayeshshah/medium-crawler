@@ -13,3 +13,22 @@
  *= require_tree .
  *= require_self
  */
+td, th {
+  border: 1px solid black;
+  padding: 3px;
+}
+
+#blog-main {
+  width: 50%;
+  border: 1px solid gray;
+  padding: 15px;
+  margin-left: 25%;
+}
+#blog-title {
+  border-bottom: 1px solid black;
+}
+
+#blog-details {
+  margin-top: 10px;
+  color: gray;
+}

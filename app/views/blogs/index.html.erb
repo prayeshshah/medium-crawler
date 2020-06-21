@@ -1,0 +1,18 @@
+<table class="table">
+	<thead>
+    <tr>
+      <th>Author</th>
+      <th>Title</th>
+      <th>Details</th>
+    </tr> 
+  </thead>
+  <tbody>
+    <% @blogs.each do |blog| %>
+      <tr>
+        <td><%= blog.author %></td>
+        <td><%= link_to blog.title, blog_path(blog.id) %></td>
+        <td><%= blog.details %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

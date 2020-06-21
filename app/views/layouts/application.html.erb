@@ -10,6 +10,10 @@
   </head>
 
   <body>
+    <%= form_tag blogs_path do %>
+      <%= text_field '', 'tag' %>
+      <%= submit_tag( "Submit" ) %>
+    <% end %>
     <%= yield %>
   </body>
 </html>
