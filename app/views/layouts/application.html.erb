@@ -10,10 +10,7 @@
   </head>
 
   <body>
-    <%= form_tag blogs_path do %>
-      <%= text_field '', 'tag' %>
-      <%= submit_tag( "Submit" ) %>
-    <% end %>
+    <%= render partial: 'layouts/header' %>
     <%= yield %>
   </body>
 </html>

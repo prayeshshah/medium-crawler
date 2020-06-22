@@ -1,19 +1,21 @@
-<div id='blog-main'>
-  <div id=blog-title>
-    <h1>
-      <%= @blog.title %>    
-    </h1>
-	</div>
-  <div id='blog-details'>
-    <%= @blog.author %><br>
-    <%= @blog.details %>
-  </div>
-  <div id='blog-body'>
-    <p>
-      <%= @blog.body %>
-    </p>
-  </div>
-  <div id='blog-footer'>
-    <%= @blog.other_tags.gsub(',', ' | ') %>
+<div id='blog'>
+  <div id='blog-main'>
+    <div id=blog-title>
+      <h1>
+        <%= @blog.title %>    
+      </h1>
+    </div>
+    <div id='blog-details'>
+      <%= @blog.author %><br>
+      <%= @blog.details %>
+    </div>
+    <div id='blog-body'>
+      <p>
+        <%= @blog.body %>
+      </p>
+    </div>
+    <div id='blog-footer'>
+      <%= @blog.other_tags.gsub(',', ' | ') %>
+    </div>
   </div>
 </div>

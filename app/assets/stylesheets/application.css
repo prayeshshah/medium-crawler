@@ -13,15 +13,17 @@
  *= require_tree .
  *= require_self
  */
-td, th {
-  border: 1px solid black;
-  padding: 3px;
+
+*{
+  margin:0;
+  padding:0;
 }
 
 #blog-main {
+  background-color: #fffff2;
   width: 50%;
-  border: 1px solid gray;
-  padding: 15px;
+  border: 1px solid #f9f1f1;
+  padding: 30px;
   margin-left: 25%;
 }
 #blog-title {
@@ -29,6 +31,75 @@ td, th {
 }
 
 #blog-details {
-  margin-top: 10px;
+  margin: 10px 0 10px 0;
   color: gray;
+}
+
+#blog-body {
+  text-align: justify;
+}
+
+.app-header {
+  height: 90px;
+  background-color: lightblue;
+  padding: 10px;
+}
+
+#blog-footer {
+  margin-top: 25px;
+}
+
+input#tag {
+  width: 300px;
+  height:  40px;
+  border-radius: 21px;
+  border-color: lightblue;
+  margin-left: 35%;
+  margin-top: 22px;
+  padding-left: 10px;
+  font-size: 22px;
+}
+
+input#tag:focus{
+  outline: none;
+}
+
+#blog {
+  background-color: #f9f9f9;
+  padding-top: 30px;
+}
+
+#blog-logo {
+  margin-top: 7px;
+  float: left;
+  width: 120px;
+  font-weight: 700;
+  font-size: xx-large;
+
+}
+
+#blog-logo a {
+  text-decoration: none;
+  color: black;
+}
+
+#blogs-table {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#blogs-table td, #blogs-table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#blogs-table tr:nth-child(even){background-color: #f2f2f2;}
+
+#blogs-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: teal;
+  color: white;
 }

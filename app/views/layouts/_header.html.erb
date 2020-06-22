@@ -1,0 +1,13 @@
+<div class='app-header'>
+  <%= form_tag blogs_path do %>
+    <div>
+      <div id='blog-logo'>
+        <%= link_to 'Medium Crawler', root_path %>
+      </div>
+      <div class='blog-search'>
+        <%= text_field '', 'tag', placeholder: 'Search a tag', class: 'blog-text-input' %>
+        <%= submit_tag( "Submit" ) %>
+      </div>
+    </div>
+  <% end %>
+</div>
