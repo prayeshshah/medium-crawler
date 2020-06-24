@@ -1,13 +1,22 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <div class='app-header'>
   <div id='blog-logo'>
     <%= link_to 'Medium Crawler', root_path %>
   </div>
-  <%= form_tag blogs_path do %>
+  <%= form_tag blogs_path, id: 'search_form' do %>
     <div>
       <div class='blog-search'>
         <%= text_field '', 'tag', placeholder: 'Eg: java, ruby', class: 'blog-text-input', required: true, autofocus: true %>
-        <%= submit_tag "Search", 'data-disable-with' => 'Crawling..' %>
+        <%= submit_tag "Search", 'data-disable-with' => 'Crawling..', id: 'submit_search' %>
       </div>
     </div>
   <% end %>
+  <div id='history-group'>
+    History:
+    <div id='history0' class='history'></div>
+    <div id='history1' class='history'></div>
+    <div id='history2' class='history'></div>
+    <div id='history3' class='history'></div>
+    <div id='history4' class='history'></div>
+  </div>
 </div>

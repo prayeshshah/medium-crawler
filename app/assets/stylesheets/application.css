@@ -127,3 +127,16 @@ input[type="submit"] {
   border-style: none;
   border-radius: 22px;
 }
+
+.history {
+  text-decoration: underline;
+  margin-left: 10px;
+  height: 15px;
+  display: inline-block;
+}
+
+#history-group {
+  margin-top: 10px;
+  margin-left: 42%;
+  display: none;
+}
