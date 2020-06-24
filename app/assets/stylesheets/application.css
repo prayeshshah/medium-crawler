@@ -68,6 +68,7 @@ input#tag:focus{
 #blog {
   background-color: #f9f9f9;
   padding-top: 30px;
+  height: 100vh;
 }
 
 #blog-logo {
