@@ -53,11 +53,12 @@ input#tag {
   width: 300px;
   height:  40px;
   border-radius: 21px;
-  border-color: lightblue;
   margin-left: 35%;
   margin-top: 22px;
   padding-left: 10px;
   font-size: 22px;
+  border-style: none;
+  border: 1px solid teal;
 }
 
 input#tag:focus{
@@ -102,4 +103,13 @@ input#tag:focus{
   text-align: left;
   background-color: teal;
   color: white;
+}
+
+input[type="submit"] {
+  width: 100px;
+  height: 40px;
+  background-color: teal;
+  color: white;
+  border-style: none;
+  border-radius: 22px;
 }

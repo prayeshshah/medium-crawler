@@ -6,7 +6,7 @@
       </div>
       <div class='blog-search'>
         <%= text_field '', 'tag', placeholder: 'Search a tag', class: 'blog-text-input' %>
-        <%= submit_tag( "Submit" ) %>
+        <%= submit_tag "Submit", 'data-disable-with' => 'Crawling..' %>
       </div>
     </div>
   <% end %>
