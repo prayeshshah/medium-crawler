@@ -5,8 +5,8 @@
   <%= form_tag blogs_path do %>
     <div>
       <div class='blog-search'>
-        <%= text_field '', 'tag', placeholder: 'Search tags...', class: 'blog-text-input' %>
-        <%= submit_tag "Submit", 'data-disable-with' => 'Crawling..' %>
+        <%= text_field '', 'tag', placeholder: 'Eg: java, ruby', class: 'blog-text-input', required: true, autofocus: true %>
+        <%= submit_tag "Search", 'data-disable-with' => 'Crawling..' %>
       </div>
     </div>
   <% end %>
