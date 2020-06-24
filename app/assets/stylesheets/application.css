@@ -19,6 +19,11 @@
   padding:0;
 }
 
+html, body, #blog {
+  min-height: 100% !important;
+  height: 100%;
+}
+
 #blog-main {
   background-color: #fffff2;
   width: 50%;
@@ -65,10 +70,18 @@ input#tag:focus{
   outline: none;
 }
 
+#blog-other-tag {
+  display: inline-block;
+  border: 1px solid;
+  padding: 3px;
+  font-size: 12px;
+  margin-left: 7px;
+}
+
 #blog {
   background-color: #f9f9f9;
   padding-top: 30px;
-  height: 100vh;
+  height: auto;
 }
 
 #blog-logo {

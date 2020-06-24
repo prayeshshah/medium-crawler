@@ -15,7 +15,10 @@
       </p>
     </div>
     <div id='blog-footer'>
-      <%= @blog.other_tags.gsub(',', ' | ') %>
+      Related tags:
+      <% @blog.other_tags.each do |other_tag| %>
+        <div id='blog-other-tag'><%= other_tag %></div>
+      <% end %>
     </div>
   </div>
 </div>

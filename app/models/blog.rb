@@ -1,4 +1,5 @@
 class Blog < ApplicationRecord
+  serialize :other_tags
 
   BASE_URL = 'https://medium.com/tag/'
 
@@ -12,13 +13,13 @@ class Blog < ApplicationRecord
         cards = parsed_doc.css('.postArticle')
         cards.each do |card|
           article_body_url = card.css('.postArticle-readMore a').attr('href').value
-          parsed_article_body_doc = Nokogiri::HTML(get_request(article_body_url.split('?')[0]))
+          parsed_article_body_doc = Nokogiri::HTML(get_request(article_body_url.split('?')[0])) 
           data_hash = {
             author: card.css('.postMetaInline a')[1].text,
             title: card.css('.section-inner h3').text,
             details: card.css('time').text + ', ' + card.css('.readingTime').attr('title').value,
-            body: parsed_article_body_doc.css('p').text,
-            other_tags: parsed_article_body_doc.css('.n .p ul li').map{|t| t.text}.join(', '),
+            body: parsed_article_body_doc.css('p')[0..-3].text,
+            other_tags: parsed_article_body_doc.css('.n .p ul li').map{|t| t.text},
             search_tag: tag
           }
           Blog.create(data_hash)
