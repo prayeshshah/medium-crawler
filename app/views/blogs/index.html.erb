@@ -1,6 +1,10 @@
-<h1>
-  Found <%= @blog_count %> results
-</h1>
+<h2>
+  <% if @blog_count > 0 %>
+    Found <%= @blog_count %> results
+  <% else %>
+    No results. Please search using relevant tag(s) 
+  <% end %>
+</h2>
 <% if @blog_count > 0 %>
   <table id="blogs-table">
   	<thead>
